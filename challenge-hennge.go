@@ -9,7 +9,7 @@ import (
 )
 
 func sumPow(numbers []string) int {
-	// if doesnt have any numbers, return 0
+	// if doesn't have any numbers, return 0
 	if len(numbers) == 0 {
 		return 0
 	}
@@ -21,7 +21,7 @@ func sumPow(numbers []string) int {
 		total = y * y * y * y
 	}
 
-	// sum actual result with the rest of the numbers
+	// sum the current total with the rest of the numbers
 	return total + sumPow(numbers[1:])
 }
 
@@ -58,6 +58,5 @@ func main() {
 	readCases(reader, results, 0)
 
 	// prints after all cases have been read
-	fmt.Println("\nResults:")
 	fmt.Println(strings.Join(results, "\n"))
 }
